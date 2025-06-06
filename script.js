@@ -24,8 +24,19 @@ function getHumanChoice(){
     return x;
 }
 
+function playRound(humanChoice, computerChoice){
+
+    if(humanChoice == "rock" && computerChoice != "paper")
+        console.log("You WIN!! " + humanChoice +" beats " + computerChoice)
+    else if(humanChoice == "paper" && computerChoice != "scissors")
+        console.log("You WIN!! " + humanChoice +" beats " + computerChoice)
+    else if(humanChoice == "scissors" && computerChoice != "rock")
+        console.log("You WIN!! " + humanChoice +" beats " + computerChoice)
+    else
+        console.log("You lost... " + computerChoice +" beats " + humanChoice)
+}
+
 const humanSelection = getHumanChoice().toLowerCase();
 const computerSelection = getComputerChoice();
 
-
-console.log(humanSelection)
+playRound(humanSelection, computerSelection)
