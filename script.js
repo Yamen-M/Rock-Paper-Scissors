@@ -11,3 +11,21 @@ function getComputerChoice(){
     else
         return "scissors";
 }
+
+function getHumanChoice(){
+    console.log("Rock - Paper - Scissors\n");
+    let x = prompt("Enter your choice: ")
+    while(x.toLowerCase() != "rock" && x.toLowerCase() != "paper" && x.toLowerCase() != "scissors")
+    {
+        console.log("Input Invalid!!\n");
+        console.log("Rock - Paper - Scissors\n");
+        x = prompt("Enter your choice: ")
+    }
+    return x;
+}
+
+const humanSelection = getHumanChoice().toLowerCase();
+const computerSelection = getComputerChoice();
+
+
+console.log(humanSelection)
