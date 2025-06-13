@@ -8,7 +8,7 @@ const scissorsBtn = document.getElementById('scissors');
 const resultsDiv = document.getElementById('results');
 const scoreDiv = document.getElementById('score');
 const roundCount = document.querySelector(".round");
-const btnChoices = document.querySelector(".choices");
+const resetButton = document.querySelector(".resetGamebtn");
 
 const rstButton = document.createElement("button");
 rstButton.textContent = " Restart Game?"
@@ -73,12 +73,12 @@ function playRound(humanChoice){
     if(humanScore >= 5){
         resultsDiv.innerHTML += "<br><br>YOU WON THE GAME!";
         disableButtons();
-        btnChoices.appendChild(rstButton);
+        resetButton.appendChild(rstButton);
     }    
     else if(computerScore >= 5){
         resultsDiv.innerHTML += "<br><br>YOU lost... Better luck next time!";
         disableButtons();
-        btnChoices.appendChild(rstButton);
+        resetButton.appendChild(rstButton);
     }    
 
 }
